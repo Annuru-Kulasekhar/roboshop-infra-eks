@@ -4,3 +4,7 @@ deployment:
   replicas: 1
   imageName: "annurukulasekhar/catalogue"
   imageVersion: "1.4.0"
+horizontalPodAutoScaler:
+  minReplicas: 1
+  maxReplicas: 10
+  averageUtilization: 20
