@@ -39,6 +39,10 @@ resource "aws_lb_target_group" "frontend" {
     name = "${var.project}-${var.environment}-frontend"
     port = 80
     protocol = "HTTP"
+    # if this is VM target group, then target_type should be instance. if target_type is IP pods will come and register here
+    target_type = "ip"
+    vpc_id   = local.vpc_id
+    deregistration_delay = 60
 
     health_check {
         healthy_threshold = 2
@@ -63,7 +67,7 @@ resource "aws_lb_listener_rule" "frontend" {
 
   condition {
     host_header {
-      values = "${var.project}-${var.environment}.${var.domain_name}"
+      values = ["${var.project}-${var.environment}.${var.domain_name}"]
     }
   }
 
