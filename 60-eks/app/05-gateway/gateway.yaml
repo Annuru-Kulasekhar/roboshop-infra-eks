@@ -21,7 +21,7 @@ spec:
     port: 443
     protocol: HTTPS
     tls:
-      mode: terminate
+      mode: Terminate
       options:
         gateway.k8s.aws/certificate-arn: "arn:aws:acm:us-east-1:051674313773:certificate/a040ecc2-3efd-4587-8b82-205127a98f47"
     allowedRoutes:
