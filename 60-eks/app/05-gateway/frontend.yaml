@@ -17,7 +17,7 @@ metadata:
   namespace: roboshop
 spec:
   parentRefs:
-  - name: frontend-gateway
+  - name: roboshop-gateway
     sectionName: https
   hostnames:
   - "roboshop-dev.annuru.online"
