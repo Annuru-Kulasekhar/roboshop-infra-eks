@@ -9,7 +9,7 @@ spec:
     parametersRef:
       group: gateway.k8s.aws
       kind: LoadBalancerConfiguration
-      name: roboshop-aws-config
+      name: roboshop-aws-alb-config
   listeners:
   - name: http
     port: 80
