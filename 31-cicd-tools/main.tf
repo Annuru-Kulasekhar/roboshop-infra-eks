@@ -47,6 +47,8 @@ resource "aws_instance" "sonarqube" {
   vpc_security_group_ids = [local.sonar_sg_id]
   subnet_id = local.public_subnet_id #replace your Subnet in default VPC
   key_name = "kulasekhar"
+  user_data = file("sonar.sh")
+  
   # need more for terraform
   root_block_device {
     volume_size = 20
