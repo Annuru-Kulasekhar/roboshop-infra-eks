@@ -48,6 +48,8 @@ resource "aws_instance" "sonarqube" {
   subnet_id = local.public_subnet_id #replace your Subnet in default VPC
   key_name = "kulasekhar"
   user_data = file("sonar.sh")
+  user_data_replace_on_change = true
+
   
   # need more for terraform
   root_block_device {
