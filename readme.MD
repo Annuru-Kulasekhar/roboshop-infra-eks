@@ -40,13 +40,19 @@ The project follows Infrastructure as Code (IaC) principles using Terraform and 
 70-acm
 80-frontend-alb
 
+---
+
 🚀 Features
+
 Infrastructure as Code using Terraform
 Kubernetes deployment on Amazon EKS
 Reusable Terraform modules
 CI/CD integration
 Secure AWS infrastructure
 Monitoring & observability support
+
+---
+
 ⚙️ Deployment Steps
 Initialize Terraform
 terraform init
@@ -56,11 +62,17 @@ Provision Infrastructure
 terraform apply
 Verify Cluster Nodes
 kubectl get nodes
+
+---
+
 📈 Future Improvements
 GitOps with ArgoCD
 Blue-Green Deployments
 DevSecOps Integrations
 Multi-environment automation
+
+---
+
 👨‍💻 Author
 
 Kulasekhar Annuru
