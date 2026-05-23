@@ -43,7 +43,6 @@ The project follows Infrastructure as Code (IaC) principles using Terraform and 
 ---
 
 🚀 Features
-
 Infrastructure as Code using Terraform
 Kubernetes deployment on Amazon EKS
 Reusable Terraform modules
@@ -52,14 +51,17 @@ Secure AWS infrastructure
 Monitoring & observability support
 
 
-
 ⚙️ Deployment Steps
+
 Initialize Terraform
 terraform init
+
 Review Infrastructure Changes
 terraform plan
+
 Provision Infrastructure
 terraform apply
+
 Verify Cluster Nodes
 kubectl get nodes
 
