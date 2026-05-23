@@ -1,188 +1,216 @@
-````md id="0drjry"
 # 🚀 Roboshop Infrastructure on Amazon EKS
 
 Production-grade AWS infrastructure deployment for the Roboshop microservices application using Terraform, Kubernetes, Helm, and CI/CD automation.
 
----
+---# 
 
-# 📌 Overview
+📌 Project Overview
 
-This project provisions and manages a scalable cloud-native infrastructure on AWS for deploying microservices applications on Amazon EKS.
+This repository provisions and manages scalable cloud-native infrastructure on AWS for deploying microservices applications on Amazon EKS.
 
-The infrastructure includes:
-
-- VPC Networking
-- Security Groups
-- Bastion Host
-- Amazon RDS
-- Amazon EKS
-- ACM Certificates
-- Application Load Balancers
-- CI/CD Integration
-- Monitoring Components
+The project follows Infrastructure as Code (IaC) principles using Terraform and supports Kubernetes-based application deployments with CI/CD integration.
 
 ---
 
-# 🛠️ Tools & Technologies
+# 🛠️ Technologies Used
 
 - AWS
 - Terraform
-- Kubernetes (EKS)
+- Kubernetes (Amazon EKS)
 - Helm
 - Jenkins
 - Docker
-- ACM
 - Route53
+- ACM
 - Linux
 - Shell Scripting
 
 ---
 
-# 📂 Project Structure
+# 📂 Repository Structure
 
 ```text
-00-vpc                → VPC & networking
-10-sg                 → Security groups
-20-sg-rules           → Security group rules
-30-bastion            → Bastion host setup
-31-cicd-tools         → Jenkins & CI/CD tools
-40-rds                → Amazon RDS setup
-60-eks                → Amazon EKS cluster
-70-acm                → SSL certificate management
-80-frontend-alb       → Application Load Balancer
-````
 
----
+00-vpc                → VPC & Networking Configuration
+10-sg                 → Security Groups Configuration
+20-sg-rules           → Security Group Rules Management
+ 30-bastion            → Bastion Host Infrastructure31
+ -cicd-tools         → Jenkins & CI/CD Tools Setup
+ 40-rds                → Amazon RDS Infrastructure
+ 60-eks                → Amazon EKS Cluster Provisioning
+ 70-acm                → ACM SSL Certificate Configuration
+ 80-frontend-alb       → Application Load Balancer Setup
+ .gitignore            → Git Ignore Rules
+ README.md             → Project Documentation
 
-# ☸️ Infrastructure Architecture
+☸️ Infrastructure Components
+The infrastructure includes:
 
-(Add architecture diagram here)
 
-Example:
+Secure VPC networking
 
-* Users → ALB → Ingress → EKS Services → Pods
-* RDS for backend database
-* Bastion host for administration
-* Terraform for provisioning
 
----
+Public and private subnet architecture
 
-# 🚀 Features
 
+Security group isolation
+
+
+Bastion host setup
+
+
+Amazon EKS cluster deployment
+
+
+Amazon RDS database provisioning
+
+
+ACM SSL certificate integration
+
+
+Application Load Balancer configuration
+
+
+CI/CD tooling support
+
+
+Monitoring and observability setup
+
+
+
+🚀 Features
 ✅ Infrastructure as Code using Terraform
-
-✅ Multi-tier AWS architecture
-
-✅ Kubernetes deployment on Amazon EKS
-
+✅ Modular AWS infrastructure deployment
+✅ Kubernetes cluster provisioning on Amazon EKS
 ✅ Reusable Terraform modules
-
-✅ Secure networking with Security Groups
-
-✅ SSL integration using ACM
-
-✅ Production-style infrastructure design
-
+✅ Secure networking and access management
 ✅ CI/CD integration support
+✅ SSL/TLS integration using ACM
+✅ Production-style infrastructure architecture
+✅ Monitoring and observability support
 
----
-
-# ⚙️ Deployment Flow
-
-```bash
+⚙️ Deployment Steps
+Initialize Terraform
 terraform init
+Review Infrastructure Changes
 terraform plan
+Provision Infrastructure
 terraform apply
-```
-
-Deploy Kubernetes resources:
-
-```bash
+Configure Kubernetes Access
+aws eks update-kubeconfig --region <region> --name <cluster-name>
+Verify Cluster Nodes
+kubectl get nodes
+Deploy Kubernetes Resources
 kubectl apply -f manifests/
-```
-
-Deploy Helm charts:
-
-```bash
+Deploy Helm Charts
 helm install
-```
 
----
+🔐 Security Components
 
-# 🔐 Security Components
 
-* Private/Public subnet separation
-* Bastion-based access
-* IAM-based permissions
-* Security group isolation
-* TLS certificates using ACM
+Public and private subnet separation
 
----
 
-# 📊 Monitoring & Observability
+Bastion-based administrative access
 
-* Prometheus
-* Grafana
-* Kubernetes metrics
-* Pod monitoring
 
----
+IAM-based authentication and authorization
 
-# 🛠️ Troubleshooting
 
-## Common Issues
+Security group isolation
 
-### EKS Nodes Not Joining Cluster
 
+SSL/TLS certificates using ACM
+
+
+Kubernetes-native workload isolation
+
+
+
+📊 Monitoring & Observability
+
+
+Prometheus monitoring
+
+
+Grafana dashboards
+
+
+Kubernetes metrics collection
+
+
+Pod monitoring
+
+
+Infrastructure observability support
+
+
+
+🛠️ Troubleshooting
+EKS Nodes Not Joining Cluster
+Verify cluster node status:
+kubectl get nodes
 Check:
 
-```bash
-kubectl get nodes
-```
 
+IAM roles
+
+
+Security groups
+
+
+Node group configuration
+
+
+Cluster connectivity
+
+
+
+ALB Not Routing Traffic
 Verify:
 
-* IAM roles
-* Security groups
-* Node group status
 
----
+Ingress configuration
 
-### ALB Not Routing Traffic
 
-Check:
+Target groups
 
-* Ingress configuration
-* Target groups
-* ACM certificate
-* Security group rules
 
----
+ACM certificate association
 
-### Terraform State Issues
 
-```bash
+Security group rules
+
+
+
+Terraform State Issues
+Refresh Terraform state:
 terraform refresh
+List Terraform-managed resources:
 terraform state list
-```
 
----
+📈 Future Improvements
 
-# 📈 Future Improvements
 
-* GitOps with ArgoCD
-* Automated rollback strategy
-* Blue-Green deployments
-* Multi-environment automation
-* DevSecOps integrations
+GitOps implementation using ArgoCD
 
----
 
-# 👨‍💻 Author
+Automated rollback strategies
 
+
+Blue-Green deployments
+
+
+Multi-environment infrastructure automation
+
+
+DevSecOps integrations
+
+
+Advanced monitoring enhancements
+
+
+
+👨‍💻 Author
 Kulasekhar Annuru
-
-DevOps Engineer | AWS | Kubernetes | Terraform | CI/CD | DevSecOps
-
-```
-```
+DevOps Engineer | AWS | Kubernetes | Terraform | Jenkins | CI/CD | DevSecOps
