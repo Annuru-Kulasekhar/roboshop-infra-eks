@@ -30,15 +30,15 @@ The project follows Infrastructure as Code (IaC) principles using Terraform and 
 # 📂 Repository Structure
 
 ```text
-00-vpc
-10-sg
-20-sg-rules
-30-bastion
-31-cicd-tools
-40-rds
-60-eks
-70-acm
-80-frontend-alb
+00-vpc  → VPC setup
+10-sg  → Security Groups
+20-sg-rules  → SG rules
+30-bastion  → Bastion host
+31-cicd-tools  → Jenkins setup
+40-rds  → Database
+60-eks  → Kubernetes cluster
+70-acm  → SSL certificates
+80-frontend-alb  → Load balancer
 ```
 
 ---
