@@ -34,14 +34,14 @@ The project follows Infrastructure as Code (IaC) principles using Terraform and 
 00-vpc                → VPC & Networking Configuration
 10-sg                 → Security Groups Configuration
 20-sg-rules           → Security Group Rules Management
- 30-bastion            → Bastion Host Infrastructure31
- -cicd-tools         → Jenkins & CI/CD Tools Setup
- 40-rds                → Amazon RDS Infrastructure
- 60-eks                → Amazon EKS Cluster Provisioning
- 70-acm                → ACM SSL Certificate Configuration
- 80-frontend-alb       → Application Load Balancer Setup
- .gitignore            → Git Ignore Rules
- README.md             → Project Documentation
+30-bastion            → Bastion Host Infrastructure
+31-cicd-tools         → Jenkins & CI/CD Tools Setup
+40-rds                → Amazon RDS Infrastructure
+60-eks                → Amazon EKS Cluster Provisioning
+70-acm                → ACM SSL Certificate Configuration
+80-frontend-alb       → Application Load Balancer Setup
+.gitignore            → Git Ignore Rules
+README.md             → Project Documentation
 
 ☸️ Infrastructure Components
 The infrastructure includes:
