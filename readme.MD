@@ -51,7 +51,7 @@ CI/CD integration
 Secure AWS infrastructure
 Monitoring & observability support
 
----
+
 
 ⚙️ Deployment Steps
 Initialize Terraform
@@ -63,7 +63,7 @@ terraform apply
 Verify Cluster Nodes
 kubectl get nodes
 
----
+
 
 📈 Future Improvements
 GitOps with ArgoCD
@@ -71,7 +71,7 @@ Blue-Green Deployments
 DevSecOps Integrations
 Multi-environment automation
 
----
+
 
 👨‍💻 Author
 
